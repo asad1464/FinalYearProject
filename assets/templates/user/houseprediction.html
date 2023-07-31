@@ -1,0 +1,16 @@
+{% extends 'userbase.html' %}
+
+{% block contents %}
+<div>
+
+        <center><p>welcome to userpage.........</p></center>
+     <table border="2px solid red" align="left">
+        <tr>
+        <td style="color:white">predicted </td>
+            <td style="color:white">actual</td></tr>
+       <tr> <td style="color:white"> {{ errordiff }}</td>
+        <td style="color:white"></td></tr>
+    </table>
+
+</div>
+    {% endblock %}

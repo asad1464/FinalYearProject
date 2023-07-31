@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+<div>
+
+        <center><p>welcome to userpage.........</p></center>
+    <h3 style="color:blue">USER REGISTRATION</h3>
+                            <form action="/userregister/" method="POST">
+                                    {% csrf_token %}
+                                    <table>
+                                          <tr><td style="color:yellow">user name</td><td>{{form.name}}</td></tr>
+                            <tr><td style="color:yellow">Password</td><td>{{form.passwd}}</td></tr>
+                            <tr><td style="color:yellow">confirmPassword</td><td>{{form.cwpasswd}}</td></tr>
+                            <tr><td style="color:yellow">Email</td><td>{{form.email}}</td></tr>
+                            <tr><td style="color:yellow">Mobile</td><td>{{form.mobileno}}</td></tr>
+                            <tr><td></td><td>{{form.status}}</td></tr>
+                                    </table>
+                                <input type="submit" value="submit">
+
+                                </form>
+
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <font color='darkred'> {{ message }}</font>
+                                {% endfor %}
+                            {% endif %}
+
+        </p>
+    </div>
+
+
+
+</div>
+    {% endblock %}

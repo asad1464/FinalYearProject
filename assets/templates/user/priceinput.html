@@ -1,0 +1,76 @@
+{% extends 'userbase.html' %}
+
+{% block contents %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border=4>
+        <thead>
+
+<!--            <th>tx_price</th>-->
+<!--            <th>beds</th>-->
+<!--            <th>baths</th>-->
+            <th style="color:yellow">sqft</th>
+<!--            <th>year_built</th>-->
+<!--            <th>lot_size</th>-->
+<!--            <th>basement</th>-->
+            <th style="color:yellow">restaurants</th>
+            <th style="color:yellow">groceries</th>
+            <th style="color:yellow">nightlife</th>
+            <th style="color:yellow">cafes</th>
+            <th style="color:yellow">shopping</th>
+            <th style="color:yellow">arts_entertainment</th>
+            <th style="color:yellow">beauty_spas</th>
+            <th style="color:yellow">active_life</th>
+            <th style="color:yellow">median_age</th>
+            <th style="color:yellow">married</th>
+            <th style="color:yellow">college_grad</th>
+            <th style="color:yellow">property_tax</th>
+<!--            <th>insurance</th>-->
+            <th style="color:yellow">median_school</th>
+            <th style="color:yellow">num_school</th>
+            <th style="color:yellow">tx_year</th>
+            <th style="color:yellow"> Operations</th>
+        </thead>
+    {% for values in inputvalue %}
+        <tr>
+
+<!--            <td>{{values.tx_price}}</td>-->
+<!--            <td>{{values.beds}}</td>-->
+<!--            <td>{{values.baths}}</td>-->
+            <td style="color:white">{{values.sqft}}</td>
+<!--            <td>{{values.year_built}}</td>-->
+<!--            <td>{{values.lot_size}}</td>-->
+<!--            <td>{{values.basement}}</td>-->
+            <td style="color:white">{{values.restaurants}}</td>
+            <td style="color:white">{{values.groceries}}</td>
+            <td style="color:white">{{values.nightlife}}</td>
+            <td style="color:white">{{values.cafes}}</td>
+            <td style="color:white">{{values.shopping}}</td>
+            <td style="color:white">{{values.arts_entertainment}}</td>
+            <td style="color:white">{{values.beauty_spas}}</td>
+            <td style="color:white">{{values.active_life}}</td>
+            <td style="color:white">{{values.median_age}}</td>
+            <td style="color:white">{{values.married}}</td>
+            <td style="color:white">{{values.college_grad}}</td>
+            <td style="color:white">{{values.property_tax}}</td>
+<!--            <td>{{values.insurance}}</td>-->
+            <td style="color:white">{{values.median_school}}</td>
+            <td style="color:white">{{values.num_school}}</td>
+            <td style="color:white">{{values.tx_year}}</td>
+            <td style="color:white">
+                <a href="price/{{values.id}}" class="btn btn-success btn-lg">Price</a>
+
+            </td>
+
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>
+ {% endblock %}

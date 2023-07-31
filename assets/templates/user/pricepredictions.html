@@ -1,0 +1,24 @@
+{% extends 'userbase.html' %}
+
+{% block contents %}
+<body>
+<div >
+
+        <center><p>welcome to userpage.........</p></center>
+    <h3 style="color:red" >USER DATA</h3>
+
+                            <form  style="color:yellow;" method="POST">
+
+                                    {{ form.as_ul }}
+                                {% csrf_token %}
+
+                                <input type="submit" value="submit">
+
+                                </form>
+
+        </p>
+    </div>
+
+</div>
+</body>
+    {% endblock %}

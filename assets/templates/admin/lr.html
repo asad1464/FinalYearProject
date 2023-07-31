@@ -1,0 +1,19 @@
+{% extends 'adminbase.html' %}
+
+{% block contents %}
+<div>
+
+        <center><p>welcome to userpage.........</p></center>
+    <table border="2px solid red" align="left">
+        <tr>
+        <<td style="color:yellow">r2score</td>
+        <td style="color:yellow">rmsescore</td>
+        <td style="color:yellow">mean_absolute_error</td>
+            <td style="color:yellow">mean_squared_error</td></tr>
+        <tr><td style="color:yellow">{{r2score}}</td>
+        <td style="color:yellow">{{rmsescore}}</td>
+        <td style="color:yellow">{{mean_absolute_error}}</td>
+        <td style="color:yellow">{{mean_squared_error}}</td></tr>
+    </table>
+</div>
+    {% endblock %}

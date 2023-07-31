@@ -1,0 +1,47 @@
+{% extends 'userbase.html' %}
+
+{% block contents %}
+<div>
+
+        <center><p>welcome to userpage.........</p></center>
+    <h3 style="color:yellow">USER ADD DATA</h3>
+                            <form action="/adddata/" method="POST">
+                                    {% csrf_token %}
+                                    <table>
+                                          <tr><td style="color:yellow">tx_price</td><td>{{form.tx_price}}</td></tr>
+                            <tr><td style="color:yellow">beds</td><td>{{form.beds}}</td></tr>
+                            <tr><td style="color:yellow">baths</td><td>{{form.baths}}</td></tr>
+                            <tr><td style="color:yellow">sqft</td><td>{{form.sqft}}</td></tr>
+                            <tr><td style="color:yellow">year_built</td><td>{{form.year_built}}</td></tr>
+                            <tr><td style="color:yellow">lot_size</td><td>{{form.lot_size}}</td></tr>
+<!--                            <tr><td style="color:yellow">property_type</td><td>{{form.property_type}}</td></tr>-->
+<!--                            <tr><td style="color:yellow">exterior_walls</td><td>{{form.exterior_walls}}</td></tr>-->
+<!--                            <tr><td style="color:yellow">roof</td><td>{{form.roof}}</td></tr>-->
+                            <tr><td style="color:yellow">basement</td><td>{{form.basement}}</td></tr>
+                                        <tr><td style="color:yellow">restaurants</td><td>{{form.restaurants}}</td></tr>
+                                        <tr><td style="color:yellow">groceries</td><td>{{form.groceries}}</td></tr>
+                                        <tr><td style="color:yellow">nightlife</td><td>{{form.nightlife}}</td></tr>
+                                        <tr><td style="color:yellow">cafes</td><td>{{form.cafes}}</td></tr>
+                                        <tr><td style="color:yellow">shopping</td><td>{{form.shopping}}</td></tr>
+                                        <tr><td style="color:yellow">arts_entertainment</td><td>{{form.arts_entertainment}}</td></tr>
+                                        <tr><td style="color:yellow">beauty_spas</td><td>{{form.beauty_spas}}</td></tr>
+                                        <tr><td style="color:yellow">active_life</td><td>{{form.active_life}}</td></tr>
+                                        <tr><td style="color:yellow">median_age</td><td>{{form.median_age}}</td></tr>
+                                        <tr><td style="color:yellow">married</td><td>{{form.married}}</td></tr>
+                                        <tr><td style="color:yellow">college_grad</td><td>{{form.college_grad}}</td></tr>
+                                        <tr><td style="color:yellow">property_tax</td><td>{{form.property_tax}}</td></tr>
+                                        <tr><td style="color:yellow">insurance</td><td>{{form.insurance}}</td></tr>
+                                        <tr><td style="color:yellow">median_school</td><td>{{form.median_school}}</td></tr>
+                                        <tr><td style="color:yellow">num_school</td><td>{{form.num_school}}</td></tr>
+                                        <tr><td style="color:yellow">tx_year</td><td>{{form.tx_year}}</td></tr>
+
+                                    </table>
+                                <input type="submit" value="submit">
+
+                                </form>
+
+        </p>
+    </div>
+
+</div>
+    {% endblock %}

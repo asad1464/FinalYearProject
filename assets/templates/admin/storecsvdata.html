@@ -1,0 +1,20 @@
+{% extends 'adminbase.html' %}
+
+{% block contents %}
+<div>
+
+            <center><h3>welcome to admin page</h3>
+                    <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+        <center>
+            <table>
+               <!--<tr><td>Name<input type="text" name="name" value=""><br><br><br></td></tr>-->
+                <tr><td> File<input type="file" name="file" value="file"><br><br><br></td></tr>
+                <tr><td><button type="submit" >Save</button></tr></td>
+            </table>
+        </center>
+</form>
+                </center>
+
+</div>
+    {% endblock %}

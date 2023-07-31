@@ -1,0 +1,37 @@
+{% extends 'adminbase.html' %}
+
+{% block contents %}
+<div>
+
+        <center><p>welcome to homepage.........</p></center>
+    <table border="2px solid red" align="left">
+                                  <tr><th style="color:yellow">Id</th>
+                                      <th style="color:yellow">name</th>
+
+                                    <th style="color:yellow">email</th>
+                                    <th style="color:yellow">mobileno</th>
+                                    <th style="color:yellow">status</th>
+                                    <th style="color:yellow">activate</th>
+                                  </tr>
+
+                              {% for x in qs %}
+                                  <tr>
+                                    <td style="color:yellow">{{x.id}}</td>
+                                    <td style="color:yellow">{{x.name}}</td>
+
+                                    <td style="color:yellow">{{x.email}}</td>
+                                    <td style="color:yellow">{{x.mobileno}}</td>
+                                    <td style="color:yellow">{{x.status}}</td>
+
+                                    {% if x.status == 'waiting' %}
+                                    <td style="color:orange"> <a href="/activateuser/?pid={{ x.id }}" >Activate</a></td>
+                                    {% else %}
+                                            <td style="color:orange"> Activated</td>
+                                            {% endif %}
+
+                                     </tr>
+                                    {% endfor %}
+
+                            </table>
+</div>
+    {% endblock %}
